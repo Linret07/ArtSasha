@@ -1,0 +1,61 @@
+@media (max-width: 520px) {
+    .header-buttons {
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+    }
+    .header-buttons a,
+    .header-buttons button {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 18px;
+    }
+    /* Make the login button more compact on mobile */
+    .header-buttons .login-top-btn {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 16px;
+        min-width: 0;
+    }
+    /* Slightly reduce donate and theme button padding to fit one row */
+    .header-buttons .donate-btn,
+    .header-buttons .theme-toggle-btn {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+/* Override broader mobile rules in main stylesheet that force full-width login button */
+@media (max-width: 600px) {
+    .header-buttons .login-top-btn {
+        width: auto !important;
+        padding: 6px 10px !important;
+        margin-top: 0 !important;
+        flex: 0 0 auto !important;
+    }
+    .header-buttons {
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+    }
+}
+
+/* Remove rocket icon on mobile for the "to-top" button */
+@media (max-width: 520px) {
+    .btn-to-top::before,
+    .btn-to-top::after {
+        display: none !important;
+        content: '' !important;
+    }
+}
+
+/* Completely hide the back-to-top button on mobile */
+@media (max-width: 520px) {
+    .btn-to-top {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+}

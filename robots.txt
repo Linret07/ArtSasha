@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /ArtSasha/
+
+# Technical endpoints and diagnostics
+Disallow: /ArtSasha/comments_ajax.php
+Disallow: /ArtSasha/like.php
+Disallow: /ArtSasha/unsubscribe.php
+
+Sitemap: https://atcraft.com.ua/ArtSasha/sitemap.xml
